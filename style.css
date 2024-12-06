@@ -17,16 +17,47 @@ body {
   src: url('/fonts/Coconat.woff');
 }
 
+/* Styles for Header Section */
 .navbar {
   display: flex;
-  padding: 15px;
+  padding-inline: 10px;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 20;
+  box-shadow: 0px 2px 22px 0px #7E7A7A40;
 }
 
 .ham-menu {
   display: none;
+}
+
+.drop-down {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  background-color: #fff;
+  display: none;
+  padding-block: 10px;
+}
+
+.drop-down div {
+  padding-block: 5px;
+  width: 100%;
+}
+
+.active {
+  display: block;
+}
+
+nav i {
+  transition: 0.5s ease-in-out;
+}
+
+.rotate-arrow {
+  rotate: 180deg;
 }
 
 .logo {
@@ -48,34 +79,41 @@ h3 {
 
 nav {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 nav a {
   text-decoration: none;
   color: #000000;
   font-size: 1.2rem;
+  padding-inline: 10px;
+  padding-block: 15px;
+  background: linear-gradient(#E2E8E8, #E2E8E8);
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: 0.5s ease-out;
+  position: relative;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-size: 100% 100%;
 }
 
 nav img {
   cursor: pointer;
 }
 
+/* Styles for Home Page Section */
 .home-section {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  position: relative;
 }
 
 .home-section-left {
   width: 40%;
   padding-left: 3rem;
-  overflow: hidden;
 }
 
 span {
@@ -86,186 +124,27 @@ span {
   font-family: coconat;
   font-weight: 400;
   font-size: 4rem;
+  margin-top: 40px;
 }
 
 .home-section-left p {
   font-size: 1.7rem;
-  margin-top: 15%;
+  margin-top: 100px;
 }
 
-.footer-right {
-  position: relative;
+.home-section-right {
   width: 60%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-.footer-logo h1 {
-  margin-block: 2rem;
+#svgd {
+  width: 90%;
+  height: auto;
+  height: 80%;
 }
 
-.circle1 {
-  height: 60%;
-  width: 29%;
-  border: 2px solid black;
-  border-radius: 100%;
-  border-right-style: dashed;
-  rotate: 335deg;
-  position: absolute;
-  left: 46%;
-  top: 29%;
-}
-
-.circle2 {
-  height: 60%;
-  width: 29%;
-  border: 2px solid black;
-  border-radius: 100%;
-  border-right-style: dashed;
-  rotate: 155deg;
-  position: absolute;
-  left: 65%;
-  top: 10%;
-}
-
-.dot1 {
-  background-color: #142E36;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 100%;
-  position: absolute;
-  right: 33%;
-  top: 29%;
-  animation: 3s move1;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-}
-
-.dot2 {
-  background-color: #405987;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 100%;
-  position: absolute;
-  right: 32%;
-  top: 52%;
-  animation: 3s move2;
-  animation-iteration-count: infinite;
-}
-
-.dot3 {
-  background-color: #D67514;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 100%;
-  position: absolute;
-  right: 24.7%;
-  top: 66%;
-  animation: 3s move3;
-  animation-iteration-count: infinite;
-}
-
-.dot4 {
-  background-color: #9969DB;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 100%;
-  position: absolute;
-  right: 25%;
-  top: 45%;
-  animation: 3s move4;
-  animation-iteration-count: infinite;
-}
-
-@keyframes move2 {
-  0% {
-    transform: translate(0%, 0%);
-  }
-
-  25% {
-    transform: translate(35%, 90%);
-  }
-
-  50% {
-    transform: translate(90%, 150%);
-  }
-
-  75% {
-    transform: translate(200%, 250%);
-  }
-
-  100% {
-    transform: translate(350%, 330%);
-  }
-}
-
-@keyframes move1 {
-  0% {
-    transform: translate(0%, 0%);
-  }
-
-  25% {
-    transform: translate(-27%, 100%);
-  }
-
-  50% {
-    transform: translate(-40%, 250%);
-  }
-
-  75% {
-    transform: translate(-30%, 380%);
-  }
-
-
-  100% {
-    transform: translate(30%, 510%);
-  }
-}
-
-@keyframes move3 {
-  0% {
-    transform: translate(0%, 0%);
-  }
-
-  25% {
-    transform: translate(30%, -150%);
-  }
-
-  50% {
-    transform: translate(40%, -200%);
-  }
-
-  75% {
-    transform: translate(18%, -350%);
-  }
-
-
-  100% {
-    transform: translate(-5%, -480%);
-  }
-}
-
-@keyframes move4 {
-  0% {
-    transform: translate(0%, 0%);
-  }
-
-  25% {
-    transform: translate(-50%, -60%);
-  }
-
-  50% {
-    transform: translate(-90%, -120%);
-  }
-
-  75% {
-    transform: translate(-190%, -250%);
-  }
-
-  100% {
-    transform: translate(-395%, -360%);
-  }
-}
-
+/* Styles for Natural Products Image Section */
 .natural-products {
   margin-inline: 3rem;
   background-image: url('/images/leaves.png');
@@ -273,8 +152,8 @@ span {
   background-position: right;
   background-repeat: no-repeat;
   border-radius: 1rem;
-  margin-bottom: 10rem;
-  padding: 2%;
+  margin-bottom: 4rem;
+  padding: 30px;
   color: #fff;
 }
 
@@ -290,17 +169,18 @@ span {
   font-size: 1.2rem;
 }
 
+/* Styles for Cards Section */
 .info {
   padding-inline: 3rem;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .card {
   width: 30%;
   border-radius: 1rem;
-  padding: 2%;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -308,6 +188,10 @@ span {
 
 .card p {
   font-size: 1.2rem;
+}
+
+.card img {
+  width: 25%;
 }
 
 .card button {
@@ -321,8 +205,8 @@ span {
 }
 
 .card button:hover {
-  border: 1px solid black;
   border-radius: .5rem;
+  border: 2px solid #000000;
 }
 
 .arrow {
@@ -353,7 +237,20 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30%;
+  margin-top: 80px;
+}
+
+.card-btn button {
+  font-size: 1rem;
+}
+
+.card-btn i {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.card-btn p {
+  margin-top: 10px;
 }
 
 .order {
@@ -365,17 +262,14 @@ span {
   width: 35%;
 }
 
-.card-btn-img {
-  width: 20%;
-}
-
+/* Styles for Auto Changing Image Section */
 .img-class {
   padding-inline: 3rem;
+  margin-bottom: 4rem;
 }
 
 .slides {
   display: flex;
-  margin-block: 5rem;
   overflow: hidden;
   border-radius: 1rem;
 }
@@ -394,7 +288,7 @@ span {
     transform: translateX(0%);
   }
 
-  25% {
+  10% {
     transform: translateX(0%);
   }
 
@@ -402,17 +296,26 @@ span {
     transform: translateX(-100%);
   }
 
-  55% {
+  60% {
     transform: translate(-100%);
   }
 
-  80% {
+  90% {
     transform: translateX(-200%);
   }
 
   100% {
     transform: translateX(-200%);
   }
+}
+
+/* Styles for Footer Section */
+footer {
+  background-color: #E2E8E8;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-inline: 3rem;
+  margin-bottom: 1rem;
 }
 
 .subscription {
@@ -449,14 +352,6 @@ span {
   cursor: pointer;
 }
 
-footer {
-  overflow: hidden;
-  background-color: #E2E8E8;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  margin-inline: 3rem;
-}
-
 .footer-section {
   background-color: #CED7D6;
   display: flex;
@@ -480,32 +375,42 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 5%;
-  width: 50%;
+  width: 60%;
 }
+
+.footer-logo h1 {
+  margin-block: 2rem;
+}
+
 
 .footer-logo {
   display: flex;
   align-items: center;
   gap: .5rem;
   background-color: #CED7D6;
-  padding-inline: 3rem;
+  padding-inline: 2rem;
 }
 
 .copyrights {
   background-color: #CED7D6;
   padding-inline: 3rem;
+  padding-bottom: 1rem;
 }
 
 ul {
   list-style-type: none;
-  margin-block: 1rem;
 }
 
 li {
-  margin-bottom: 1vh;
+  margin-bottom: 1rem;
   cursor: pointer;
-
 }
+
+li:hover {
+  text-decoration: underline;
+}
+
+/* Styles for Hamburger Menu */
 
 .ham-menu div {
   width: 35px;
@@ -527,26 +432,35 @@ li {
   transform: translate(0, -11px) rotate(45deg);
 }
 
-li:hover {
-  text-decoration: underline;
-  transition: 2s left;
+.navigations {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 60px;
+  padding-bottom: 15px;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0px 2px 22px 0px #7E7A7A40;
+  z-index: 1;
 }
 
-@media (width <=1050px) {
+@media (width <=1200px) {
   .logo img {
-    width: 18%;
+    width: 12%;
+  }
+
+  .logo {
+    width: 30%;
   }
 
   h1 {
-    font-size: 2vw;
+    font-size: 2rem;
   }
 
   nav a {
-    font-size: 1.5vw;
-  }
-
-  .home-section-left h2 {
-    font-size: 5vw;
+    font-size: 1rem;
   }
 
   span {
@@ -554,31 +468,42 @@ li:hover {
   }
 
   .home-section-left p {
-    font-size: 1.5vw;
+    font-size: 1.3rem;
+    margin-top: 90px;
   }
 
   .natural-products {
-    padding: 3vh 2vw;
+    padding: 20px;
   }
 
   .natural-products h3 {
     font-size: 2.5vw;
+    margin-block: 20px;
   }
 
   .natural-products p {
-    font-size: 1.5vw;
+    font-size: 1.1rem;
+  }
+
+  .card {
+    padding: 20px;
   }
 
   .card h3 {
-    font-size: 2.5vw;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
 
   .card p {
-    font-size: 1.5vw;
+    font-size: 1rem;
+  }
+
+  .card-btn {
+    margin-top: 35px;
   }
 
   .subscription h4 {
-    font-size: 3vw;
+    font-size: 2rem;
   }
 
   .subscription input {
@@ -586,9 +511,8 @@ li:hover {
   }
 
   .subscription img {
-    width: 3%;
-    left: 94%;
-    top: 40%;
+    width: 2%;
+    left: 94%
   }
 
   .footer-left img {
@@ -596,7 +520,7 @@ li:hover {
   }
 
   .footer-logo h1 {
-    font-size: 3vw;
+    font-size: 2.5rem;
   }
 
   .footer-logo img {
@@ -604,24 +528,238 @@ li:hover {
   }
 
   li {
-    font-size: 1.8vw;
+    font-size: 1.2rem;
   }
 
   .copyrights {
-    font-size: 1.5vw;
+    font-size: 1rem;
   }
 }
 
-@media (width <=550px) {
+@media(width <=1050px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: .8rem;
+    padding-inline: 10px;
+  }
+
+  span {
+    font-size: .6rem;
+  }
+
+  .home-section {
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+  }
+
+  .home-section-left P {
+    margin-top: 50px;
+    font-size: 1rem;
+  }
+
+  .home-section-left h2 {
+    font-size: 3rem;
+    margin-block: 2rem;
+  }
+
+  .natural-products {
+    padding: 15px;
+    margin-bottom: 3rem;
+  }
+
+  .natural-products h3 {
+    margin-block: 15px;
+  }
+
+  .natural-products p {
+    font-size: .9rem;
+  }
+
+  .info {
+    margin-bottom: 3rem;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .card p {
+    font-size: .9rem;
+  }
+
+  .card-btn {
+    margin-top: 30px;
+  }
+
+  .img-class {
+    margin-bottom: 3rem;
+  }
+
+  .subscription {
+    padding: 1.5rem;
+  }
+
+  .subscription h4 {
+    font-size: 1.3rem;
+  }
+
+  .subscription input {
+    width: 50%;
+  }
+
+  .subscription img {
+    width: 2%;
+    left: 94%
+  }
+
+  .footer-section {
+    padding: 1.5rem;
+  }
+
+  .footer-left img {
+    width: 100%;
+  }
+
+  .footer-right {
+    padding: .5rem;
+  }
+
+  .footer-logo h1 {
+    margin-block: 1rem;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+
+  .copyrights {
+    font-size: .7rem;
+  }
+
+}
+
+@media (width <=780px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    font-size: .7rem;
+    padding-inline: 5px;
+  }
+
+  nav img {
+    width: 3.5%;
+  }
+
+  .home-section {
+    margin-top: 1rem;
+  }
+
+  .home-section-left {
+    padding-left: 20px;
+  }
+
+  .home-section-left P {
+    margin-top: 30px;
+    font-size: .8rem;
+  }
+
+  .home-section-left h2 {
+    font-size: 2.5rem;
+    margin-block: 2rem;
+  }
+
+  .natural-products {
+    padding: 15px;
+    margin-bottom: 2rem;
+    margin-inline: 10px;
+  }
+
+  .natural-products h3 {
+    margin-block: 15px;
+    width: 100%;
+  }
+
+  .natural-products p {
+    font-size: .7rem;
+    width: 100%;
+  }
+
+  .info {
+    margin-bottom: 2rem;
+    padding-inline: 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: .7rem;
+  }
+
+  .img-class {
+    margin-bottom: 2rem;
+    padding-inline: 10px;
+  }
+
+  .subscription h4 {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    margin-inline: 10px;
+  }
+
+  .footer-section {
+    padding: 1rem;
+  }
+
+  .footer-logo {
+    padding-inline: 10px;
+  }
+
+  .footer-logo h1 {
+    font-size: 2rem;
+  }
+
+  .copyrights {
+    padding-inline: 10px;
+  }
+
+  li {
+    font-size: .8rem;
+  }
+}
+
+@media (width <=690px) {
   nav {
     display: none;
     position: relative;
   }
 
   nav img {
+    width: 25px;
     position: absolute;
     top: 5%;
-    width: 15%;
+    left: 10%;
   }
 
   nav :nth-child(7) {
@@ -630,199 +768,140 @@ li:hover {
 
   nav a {
     font-size: 15px;
+    margin-bottom: -25px;
   }
 
-  .navigations {
-    display: flex;
-    flex-direction: column;
+  .navbar :nth-child(5) {
+    margin-bottom: -15px;
+  }
+
+  .home-section-left span {
     position: absolute;
     top: 0;
-    right: 0;
-    padding-inline: 20px;
-    padding-top: 60px;
-    width: 200px;
-    background-color: #fff;
-    box-shadow: 0px 2px 22px 0px #7E7A7A40;
-    margin-top: 15px;
   }
 
-  .home-section {
-    margin-inline: 2vw;
+  .logo {
+    width: 80%;
+  }
+
+  .logo img {
+    width: 30px;
   }
 
   .ham-menu {
     display: inline-block;
     cursor: pointer;
+    z-index: 10;
   }
 
   .home-section {
     flex-direction: column-reverse;
-    padding-inline: 2vw;
-    overflow-x: hidden;
-  }
-
-  .home-section-left p {
-    margin-block: 3vh;
-  }
-
-  .home-section-right {
-    width: 100%;
-    height: 80vh;
-  }
-
-  .home-section-left {
-    width: 100%;
-    padding-inline: 0;
-    margin-bottom: -2vh;
-  }
-
-  .circle1 {
-    width: 60%;
-    height: 40%;
-    left: 5%;
-    top: 50%;
-    rotate: 310deg;
-  }
-
-  .circle2 {
-    width: 60%;
-    height: 40%;
-    left: 34%;
-    top: 30%;
-    rotate: 135deg;
-  }
-
-  .dot1 {
-    height: 2vh;
-    width: 2.5vw;
-  }
-
-  .dot2 {
-    height: 2vh;
-    width: 2.5vw;
-  }
-
-  .dot3 {
-    height: 2vh;
-    width: 2.5vw;
-  }
-
-  .dot4 {
-    height: 2vh;
-    width: 2.5vw;
-  }
-
-  .logo img {
-    width: 20%;
   }
 
   h1 {
-    font-size: 4vw;
+    font-size: 1.2rem;
+  }
+
+  .home-section {
+    margin-bottom: 20px;
+  }
+
+  .home-section-left {
+    min-width: 100%;
+  }
+
+  .home-section-right {
+    min-width: 100%;
+  }
+
+  .home-section-left P {
+    margin-top: 30px;
+    font-size: .8rem;
   }
 
   .home-section-left h2 {
-    font-size: 6vw;
-  }
-
-  span {
-    font-size: 1.5vw;
-  }
-
-  .home-section-left p {
-    font-size: 2vw;
+    font-size: 2rem;
+    margin-block: 1rem;
   }
 
   .natural-products {
-    margin-inline: 2vw;
-    margin-bottom: 5vh;
-    margin-top: -15vh;
-  }
-
-  .natural-products h3 {
-    font-size: 3vw;
-    margin-block: 2vh;
+    padding: 10px;
+    margin-bottom: 20px;
   }
 
   .natural-products p {
-    font-size: 2vw;
-    margin-bottom: 2vh;
+    font-size: .6rem;
+    width: 100%;
   }
 
   .info {
-    flex-direction: column;
-    gap: 2vh;
-    justify-content: center;
-    align-items: center;
-    margin-inline: 2vw;
-    margin-bottom: 3vh;
+    margin-bottom: 20px;
   }
 
   .card {
-    width: 70%;
-    padding: 1vh 3vw;
+    padding: 10px;
   }
 
   .card h3 {
-    font-size: 3vw;
+    font-size: 1rem;
   }
 
   .card p {
-    font-size: 2vw;
+    font-size: .6rem;
   }
 
-  .order {
-    margin-top: 8vh;
+  .card-btn button {
+    font-size: .8rem;
+    padding: 5px;
+  }
+
+  .img-class {
+    margin-bottom: 20px;
+  }
+
+  .subscription {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .subscription input {
+    width: 70%;
+  }
+
+  .subscription h4 {
+    font-size: 1.5rem;
+  }
+
+  .subscription img {
+    top: 60%;
+    left: 80%;
   }
 
   footer {
-    margin-inline: 2vw;
+    margin-inline: 10px;
   }
 
   .footer-section {
     flex-direction: column;
-    padding-inline: 2vw;
   }
 
-  .subscription h4 {
-    font-size: 4vw;
-  }
-
-  .subscription input {
-    width: 90%;
-  }
-
-  .subscription {
-    flex-direction: column;
-  }
-
-  .subscription img {
-    width: 5%;
-    left: 87%;
-    top: 55%;
-  }
-
-  .img-class {
-    padding-inline: 2vw;
-    margin-bottom: -3vh;
-    margin-top: -5vh;
+  .footer-left {
+    margin-bottom: 30px;
   }
 
   .footer-left img {
-    width: 60%;
+    width: 50%;
   }
 
   .footer-right {
     width: 100%;
-    margin-top: 3vh;
+    justify-content: start;
+    gap: 40px;
   }
 
   .footer-logo h1 {
-    font-size: 4vw;
-    margin-block: 3vh;
-  }
-
-  .footer-logo {
-    padding-inline: 2vw;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
   }
 
   .footer-logo img {
@@ -830,11 +909,58 @@ li:hover {
   }
 
   li {
-    font-size: 2.5vw;
+    font-size: .9rem;
   }
 
   .copyrights {
-    font-size: 2.5vw;
-    padding-inline: 2vw;
+    font-size: .5rem;
+  }
+}
+
+@media (width <=550px) {
+
+  .info {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    margin-inline: 10px;
+  }
+
+  .card {
+    min-width: 80%;
+    min-height: 400px;
+    margin-right: 50px;
+    padding: 30px;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .card-btn {
+    margin-top: 0;
+  }
+
+  .natural-products h3 {
+    font-size: 15px;
+  }
+
+  .subscription h4 {
+    font-size: 1rem;
+  }
+
+  .subscription input {
+    width: 90%;
+  }
+
+  .subscription img {
+    top: 55%;
+    left: 88%;
+    width: 4%;
   }
 }
